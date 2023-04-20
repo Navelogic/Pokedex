@@ -1,16 +1,19 @@
 let pokeApi = {}
 function convertPokeApiDetailToPokemon(pokemonDetail) {
     let pokemon = new Pokemon()
+
     pokemon.name = pokemonDetail.name
     pokemon.pokeNumber = pokemonDetail.id
 
     let types = pokemonDetail.types.map((typeSlot) => typeSlot.type.name)
     let [type] = types
-
     pokemon.types = types
     pokemon.type = type
 
     pokemon.photo = pokemonDetail.sprites.other['official-artwork']['front_default']
+    pokemon.height = pokemonDetail.height
+    pokemon.weight = pokemonDetail.weight
+    pokemon.base_experience = pokemonDetail.base_experience
 
     return pokemon
 }

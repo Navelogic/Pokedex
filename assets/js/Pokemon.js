@@ -1,7 +1,11 @@
 class Pokemon{
+    pokeNumber; //id
     name;
-    pokeNumber;
     type;
     types = [];
+    abilities = [];
     photo;
+    weight;
+    height;
+    base_experience;
 }
